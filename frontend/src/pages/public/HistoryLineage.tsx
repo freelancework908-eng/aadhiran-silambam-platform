@@ -1,0 +1,336 @@
+import React from 'react';
+import { Link } from 'react-router-dom';
+import {
+  Compass,
+  Award,
+  MapPin
+} from 'lucide-react';
+import { ScrollReveal } from '../../components/common/ScrollReveal';
+
+export const HistoryLineage: React.FC = () => {
+  const timelineEvents = [
+    {
+      year: 'c. 3,000 BCE',
+      timeframe: '5,000 Years Ago',
+      title: 'Genesis in the Kurunji Mountain Ranges of Tamilakam',
+      location: 'South India',
+      description:
+        'Originated among ancient Tamil mountain hunter-warriors in the Kurunji terrain. Practitioners studied animal combat kinematics (tiger, lion, serpent, deer) and developed the art of bamboo staff twirling and deceptive triangular footwork.',
+      tag: 'Ancient Heritage',
+    },
+    {
+      year: '1878',
+      timeframe: 'Colonial Suppression',
+      title: 'The Indian Arms Act & Threat of Extinction',
+      location: 'British India',
+      description:
+        'Under British colonial rule, traditional martial arts and weapons training were heavily criminalized throughout India. While countless Gurukulam lineages were lost forever, the direct descendants of Aadhiran continued underground transmission in the Madurai region.',
+      tag: 'Colonial Era',
+    },
+    {
+      year: '1936',
+      timeframe: 'Penang Sanctuary',
+      title: 'Grandmaster Mariapakkiam Migrates to George Town',
+      location: 'George Town, Penang, British Malaya',
+      description:
+        'The 14th direct lineage descendant of Aadhiran, Grandmaster Mariapakkiam, journeyed from Madurai to George Town. He brought the sacred, undiluted 10-stage syllabus with him, transplanting an ancient art that was rapidly facing extinction in its homeland.',
+      tag: 'Penang Migration',
+    },
+    {
+      year: '1975',
+      timeframe: '25th February 1975',
+      title: 'Official Charter & Registration of the Association',
+      location: 'George Town, Penang',
+      description:
+        'Persatuan Aadhiran Silambam Pulau Pinang was formally founded and registered under Malaysian law (ROS: PPM-014-07-25021975). Grandmaster Mariapakkiam structured systematic public and Gurukulam training for local youths.',
+      tag: 'Formal Association',
+    },
+    {
+      year: '2017',
+      timeframe: '14th February 2017',
+      title: 'CNN Travel Global Living Heritage Spotlight',
+      location: 'Global Feature',
+      description:
+        'CNN featured Aadhiran in their international article "9 reasons to visit Penang that have nothing to do with street food", acclaiming the association as George Town’s foremost living martial arts heritage.',
+      tag: 'International Media',
+    },
+    {
+      year: '2019',
+      timeframe: 'July 2019',
+      title: 'UNESCO Urban Living Heritage Inventory Recognition',
+      location: 'George Town World Heritage Site',
+      description:
+        'Selected to represent living traditional martial arts in George Town urban community inventorying supported by UNESCO and George Town World Heritage Incorporated (GTWHI). Featured on the UNESCO Intangible Cultural Heritage portal.',
+      tag: 'UNESCO Engagement',
+    },
+    {
+      year: '2020',
+      timeframe: 'November 2020',
+      title: 'UNESCO ICHCAP Global Martial Arts Division Publication',
+      location: 'Seoul / South Korea',
+      description:
+        'Aadhiran was the only martial art in Malaysia selected for publication in the global Traditional Martial Arts division by ICHCAP (International Information and Networking Centre for Intangible Cultural Heritage in the Asia-Pacific Region).',
+      tag: 'Global Publication',
+    },
+    {
+      year: '2022',
+      timeframe: '28th August 2022',
+      title: 'Malaysia Book of Records National Induction',
+      location: 'National Record',
+      description:
+        'Formally inducted into the Malaysia Book of Records as the "Oldest Silambam Association in Malaysia", recognizing uninterrupted practice since 1936 and official founding on 25 February 1975.',
+      tag: 'National Record',
+    },
+  ];
+
+  return (
+    <div className="bg-[#F8FAFC] text-[#182332]">
+      {/* 1. Header Banner - Deep Heritage Navy */}
+      <section className="relative py-20 sm:py-28 bg-[#102137] border-b border-[#183B5B] text-white overflow-hidden">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <ScrollReveal animation="fade-down" delay={0} duration={600}>
+            <div className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-[#183B5B] border border-[#C6A04A]/50 text-[#D9B96E] text-xs font-display font-bold uppercase tracking-wider mb-5 backdrop-blur-md">
+              <Compass className="w-3.5 h-3.5 text-[#C6A04A] shrink-0" />
+              <span>Guru-Student Lineage (குருகுலம்)</span>
+            </div>
+          </ScrollReveal>
+
+          <ScrollReveal animation="fade-up" delay={80} duration={650}>
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-display font-black text-white tracking-tight uppercase">
+              5,000-Year Ancient Lineage
+            </h1>
+          </ScrollReveal>
+          <ScrollReveal animation="fade-up" delay={160} duration={650}>
+            <p className="mt-3 text-lg sm:text-xl font-display text-[#D9B96E] font-semibold tracking-wide">
+              ஆதிரன் சிலம்ப வரலாறு <span className="text-slate-400 font-sans mx-2">•</span> From Kurunji Mountains to Penang
+            </p>
+          </ScrollReveal>
+
+          <ScrollReveal animation="fade-up" delay={240} duration={650}>
+            <p className="mt-4 max-w-2xl mx-auto text-sm sm:text-base text-slate-200 leading-relaxed font-normal">
+              How a primordial warrior science facing colonial eradication in India found safe haven in George Town, Penang in 1936.
+            </p>
+          </ScrollReveal>
+
+          <ScrollReveal animation="fade-up" delay={300} duration={650}>
+            <div className="flex items-center justify-center space-x-2 text-xs text-slate-300 mt-6 font-medium">
+              <Link to="/" className="hover:text-[#D9B96E] transition-colors">Home</Link>
+              <span>/</span>
+              <span className="text-[#D9B96E]">History & Lineage</span>
+            </div>
+          </ScrollReveal>
+        </div>
+      </section>
+
+      {/* 2. The Lineage Custodians: Dual Spotlight */}
+      <section className="py-20 border-b border-slate-200 bg-[#F8FAFC]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            {/* Story Exposition */}
+            <div className="lg:col-span-6 space-y-6">
+              <ScrollReveal animation="fade-up" delay={0} duration={650}>
+                <span className="text-xs uppercase font-bold text-[#C6A04A] tracking-widest block">
+                  The Historical Migration
+                </span>
+                <h2 className="text-3xl sm:text-4xl font-display font-bold text-[#102137] leading-tight mt-2">
+                  An Ancient Indian Art Preserved in George Town
+                </h2>
+                <p className="text-[#182332] leading-relaxed text-sm sm:text-base mt-4">
+                  Silambam is among the world's most ancient systematized martial arts, cultivated by the Dravidian hunter-warriors of the prehistoric Kurunji highlands. Following the severe martial prohibitions of the British Colonial era, vast swathes of India's martial heritage disappeared into oblivion.
+                </p>
+                <p className="text-[#64748B] leading-relaxed text-sm mt-3">
+                  In 1936, the 14th direct lineage descendant of Aadhiran, <strong className="text-[#102137]">Grandmaster Mariapakkiam</strong>, migrated across the Bay of Bengal from Madurai to George Town, Penang. In Penang's thriving port community, he safeguarded the complete, uncorrupted 10-stage syllabus.
+                </p>
+                <p className="text-[#64748B] leading-relaxed text-sm mt-3">
+                  Today, under the dedicated leadership of <strong className="text-[#102137]">Chief Master Siva</strong>, Penang serves as the world's sole acknowledged sanctuary of this 5,000-year traditional lineage.
+                </p>
+
+                <div className="pt-4 flex flex-wrap gap-3">
+                  <span className="inline-flex items-center px-3 py-1.5 rounded-lg bg-[#F8F5EE] border border-[#E8E3D9] text-xs text-[#102137] font-mono font-medium">
+                    <Award className="w-3.5 h-3.5 mr-1.5 text-[#C6A04A] shrink-0" />
+                    MBOR Certified (2022)
+                  </span>
+                  <span className="inline-flex items-center px-3 py-1.5 rounded-lg bg-[#F8F5EE] border border-[#E8E3D9] text-xs text-[#102137] font-mono font-medium">
+                    <MapPin className="w-3.5 h-3.5 mr-1.5 text-[#C6A04A] shrink-0" />
+                    George Town Living Heritage
+                  </span>
+                </div>
+              </ScrollReveal>
+            </div>
+
+            {/* Masters Photo Cards */}
+            <div className="lg:col-span-6 grid grid-cols-1 sm:grid-cols-2 gap-6">
+              {/* Grandmaster Mariapakkiam */}
+              <ScrollReveal animation="fade-up" delay={100} duration={650}>
+                <div className="rounded-2xl overflow-hidden border border-[#E8E3D9] bg-white shadow-sm group hover:border-[#C6A04A] hover:shadow-md transition-all duration-300 flex flex-col h-full">
+                  <div className="relative h-72 overflow-hidden bg-[#F8F5EE]">
+                    <img
+                      src="/api/public/media/stream/silambam/mariapaqiam4.png"
+                      alt="Grandmaster Mariapakkiam"
+                      width={350}
+                      height={288}
+                      loading="lazy"
+                      decoding="async"
+                      className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
+                      onError={(e) => {
+                        const t = e.currentTarget;
+                        t.onerror = null;
+                        t.src = '/uploads/mariapaqiam4.png';
+                      }}
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#102137]/90 via-transparent to-transparent" />
+                    <span className="absolute top-3 left-3 px-2.5 py-1 rounded bg-[#102137]/90 backdrop-blur-sm border border-[#C6A04A]/50 text-[10px] font-mono text-[#D9B96E] font-bold uppercase">
+                      14th Descendant
+                    </span>
+                  </div>
+                  <div className="p-5 bg-white flex-grow flex flex-col justify-between">
+                    <div>
+                      <h4 className="text-base font-display font-bold text-[#102137]">Grandmaster Mariapakkiam</h4>
+                      <p className="text-xs text-[#C6A04A] font-mono mt-0.5">1936 Migration Pioneer</p>
+                      <p className="text-xs text-[#64748B] mt-2 leading-relaxed">
+                        Transferred the sacred Kurunji martial syllabus from Madurai to Penang during British Malaya.
+                      </p>
+                    </div>
+                    <div className="mt-4 pt-3 border-t border-[#E8E3D9] text-[11px] text-[#64748B] font-mono">
+                      Safeguarded Lineage 1936–1975
+                    </div>
+                  </div>
+                </div>
+              </ScrollReveal>
+
+              {/* Master Siva */}
+              <ScrollReveal animation="fade-up" delay={200} duration={650}>
+                <div className="rounded-2xl overflow-hidden border border-[#E8E3D9] bg-white shadow-sm group hover:border-[#C6A04A] hover:shadow-md transition-all duration-300 flex flex-col h-full">
+                  <div className="relative h-72 overflow-hidden bg-[#F8F5EE]">
+                    <img
+                      src="/api/public/media/stream/silambam/siva_orig.png"
+                      alt="Chief Master Siva"
+                      width={350}
+                      height={288}
+                      loading="lazy"
+                      decoding="async"
+                      className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
+                      onError={(e) => {
+                        const t = e.currentTarget;
+                        t.onerror = null;
+                        t.src = '/uploads/siva_orig.png';
+                      }}
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#102137]/90 via-transparent to-transparent" />
+                    <span className="absolute top-3 left-3 px-2.5 py-1 rounded bg-[#102137]/90 backdrop-blur-sm border border-[#C6A04A]/50 text-[10px] font-mono text-[#D9B96E] font-bold uppercase">
+                      Heritage Custodian
+                    </span>
+                  </div>
+                  <div className="p-5 bg-white flex-grow flex flex-col justify-between">
+                    <div>
+                      <h4 className="text-base font-display font-bold text-[#102137]">Chief Master Siva</h4>
+                      <p className="text-xs text-[#C6A04A] font-mono mt-0.5">15th Lineage Successor</p>
+                      <p className="text-xs text-[#64748B] mt-2 leading-relaxed">
+                        Spearheading UNESCO Living Heritage documentation, ICHCAP division archives, and national recognition.
+                      </p>
+                    </div>
+                    <div className="mt-4 pt-3 border-t border-[#E8E3D9] text-[11px] text-[#64748B] font-mono">
+                      Living Custody (Present)
+                    </div>
+                  </div>
+                </div>
+              </ScrollReveal>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 3. Chronological Heritage Timeline - Paper Background */}
+      <section className="py-20 border-b border-[#E8E3D9] bg-[#F8F5EE]">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <ScrollReveal animation="fade-up" delay={0} duration={650}>
+            <div className="text-center max-w-3xl mx-auto mb-16">
+              <span className="text-xs uppercase font-bold text-[#C6A04A] tracking-widest block mb-2">
+                Unbroken Transmission
+              </span>
+              <h2 className="text-3xl sm:text-4xl font-display font-bold text-[#102137]">
+                Chronological Heritage Timeline
+              </h2>
+              <p className="text-[#64748B] text-xs sm:text-sm mt-3">
+                Trace the unbroken journey of Aadhiran Silambam across five thousand years of documented history.
+              </p>
+            </div>
+          </ScrollReveal>
+
+          <div className="relative border-l-2 border-[#E8E3D9] ml-4 sm:ml-36 space-y-12">
+            {timelineEvents.map((item, idx) => (
+              <ScrollReveal key={idx} animation="fade-up" delay={(idx % 4) * 80} duration={650}>
+                <div className="relative pl-8 sm:pl-12 group">
+                  {/* Year Marker on Left for desktop */}
+                  <div className="hidden sm:block absolute -left-40 top-1 text-right w-32">
+                    <span className="block text-sm font-mono font-bold text-[#102137] group-hover:text-[#C6A04A] transition-colors">
+                      {item.year}
+                    </span>
+                    <span className="block text-[11px] text-[#64748B] font-mono mt-0.5">
+                      {item.timeframe}
+                    </span>
+                  </div>
+
+                  {/* Timeline Node Dot */}
+                  <div className="absolute -left-[9px] top-2 w-4 h-4 rounded-full bg-white border-2 border-[#C6A04A] group-hover:border-[#102137] group-hover:bg-[#C6A04A] transition-all duration-300 shadow-sm" />
+
+                  {/* Content Card */}
+                  <div className="p-6 sm:p-7 rounded-2xl bg-white border border-[#E8E3D9] hover:border-[#C6A04A] transition-all duration-300 shadow-sm hover:shadow-md">
+                    <div className="flex flex-wrap items-center justify-between gap-2 mb-3">
+                      <span className="sm:hidden text-xs font-mono font-bold text-[#102137]">
+                        {item.year} • {item.timeframe}
+                      </span>
+                      <span className="text-[11px] font-mono px-2.5 py-0.5 rounded-full bg-[#F8F5EE] border border-[#E8E3D9] text-[#102137] font-semibold">
+                        {item.tag}
+                      </span>
+                      <span className="text-xs text-[#64748B] font-mono hidden sm:inline-block">
+                        {item.location}
+                      </span>
+                    </div>
+                    <h3 className="text-lg sm:text-xl font-display font-bold text-[#102137] mb-2 group-hover:text-[#C6A04A] transition-colors">
+                      {item.title}
+                    </h3>
+                    <p className="text-xs sm:text-sm text-[#64748B] leading-relaxed font-normal">
+                      {item.description}
+                    </p>
+                  </div>
+                </div>
+              </ScrollReveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 4. Bottom Link To Syllabus & Masters */}
+      <section className="py-20 bg-[#102137] border-t border-[#183B5B] text-center text-white">
+        <ScrollReveal animation="fade-up" delay={0} duration={650}>
+          <div className="max-w-4xl mx-auto px-4 sm:px-6">
+            <span className="text-xs uppercase font-bold text-[#C6A04A] tracking-widest block mb-2">
+              The Living Syllabus
+            </span>
+            <h3 className="text-3xl sm:text-4xl font-display font-bold text-white mb-4">
+              Explore the 10 Traditional Custom Stages
+            </h3>
+            <p className="text-sm sm:text-base text-white/80 mb-8 max-w-xl mx-auto leading-relaxed">
+              From Kaaladi footwork to Kurunji animal formations and flexible ribbon swords, inspect the complete curriculum.
+            </p>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+              <Link
+                to="/training-syllabus"
+                className="w-full sm:w-auto px-8 py-3.5 rounded-xl bg-[#C6A04A] hover:bg-[#D9B96E] text-[#102137] font-bold text-sm tracking-wide transition-all shadow-md hover:scale-[1.02]"
+              >
+                Explore 10 Stages →
+              </Link>
+              <Link
+                to="/instructors"
+                className="w-full sm:w-auto px-6 py-3.5 rounded-xl bg-[#183B5B] border border-[#C6A04A]/40 hover:border-[#C6A04A] text-white hover:text-white text-sm font-semibold transition-all"
+              >
+                Meet Current Masters
+              </Link>
+            </div>
+          </div>
+        </ScrollReveal>
+      </section>
+    </div>
+  );
+};

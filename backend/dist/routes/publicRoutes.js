@@ -1,0 +1,30 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = require("express");
+const publicController_1 = require("../controllers/publicController");
+const validate_1 = require("../middleware/validate");
+const router = (0, express_1.Router)();
+router.get('/home', publicController_1.getHomeContent);
+router.get('/about', publicController_1.getAboutContent);
+router.get('/lineage', publicController_1.getLineage);
+router.get('/syllabus', publicController_1.getSyllabus);
+router.get('/instructors', publicController_1.getInstructors);
+router.get('/achievements', publicController_1.getAchievements);
+router.get('/achievements/:id', publicController_1.getAchievementById);
+router.get('/events', publicController_1.getEvents);
+router.get('/events/:slug', publicController_1.getEventBySlug);
+router.get('/albums', publicController_1.getAlbums);
+router.get('/photos', publicController_1.getPhotos);
+router.get('/videos', publicController_1.getVideos);
+router.get('/news', publicController_1.getNews);
+router.get('/news/:slug', publicController_1.getNewsBySlug);
+router.get('/heritage', publicController_1.getHeritageProjects);
+router.get('/heritage/:slug', publicController_1.getHeritageBySlug);
+router.get('/partners-press', publicController_1.getPartnersPress);
+router.get('/settings', publicController_1.getSettings);
+// Public B2 Cloud Media Streaming (authenticated proxy with caching)
+router.get('/media/stream/*', publicController_1.streamMediaAsset);
+// Public form submissions with validation
+router.post('/enquiries', (0, validate_1.validateBody)(validate_1.contactEnquirySchema), publicController_1.submitContactEnquiry);
+router.post('/join-enquiry', (0, validate_1.validateBody)(validate_1.joinEnquirySchema), publicController_1.submitJoinEnquiry);
+exports.default = router;
